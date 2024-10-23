@@ -1,3 +1,5 @@
+#Kian Nezamoddini-Kachouie
+
 # Set top level variables to be utilized within main function
 original_password = ''
 encoded_password = ''
@@ -8,6 +10,7 @@ def password_encode(password):  # defines the following code as the method passw
     for num in password:  # iterates through every character in password with a for loop
         num = int(num)  # casts each character to an integer
         num += 3  # adds three to each integer
+        num = num % 10 #takes the modulos of the number with 10 to keep it as a single digit
         num = str(num)  # casts the added integer to a string
         encoded += num  # concatenates the increased string number to encoded
     return encoded  # returns encoded
